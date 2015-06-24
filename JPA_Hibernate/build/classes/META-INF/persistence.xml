@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="DotSys" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<!--<class>com.cbchen.hibernate.User</class>-->
+		<!--<mapping-file>/META-INF/orm.xml</mapping-file>-->
+
+		<properties>
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://localhost:3306/test" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="123456" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="minPoolSize" value="5" />
+			<property name="initialPoolSize" value="10" />
+			<property name="maxPoolSize" value="200" />
+			<property name="idleConnectionTestPeriod" value="120" />
+			<property name="acquireIncrement" value="10" />
+			<property name="checkoutTimeout" value="3600" />
+			<property name="numHelperThreads" value="4" />
+			<property name="maxStatements" value="400" />
+			<property name="maxStatementsPerConnection" value="20" />
+			<property name="maxIdleTime" value="180" />
+			<property name="acquireRetryAttempts" value="30" />
+		</properties>
+	</persistence-unit>
+</persistence>
